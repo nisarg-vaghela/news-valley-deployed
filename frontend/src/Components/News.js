@@ -20,7 +20,7 @@ export default function News (props){
     const updateSite = async () => {
         props.setProgress(0);
         // let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=34ab3c84f5d14dcd82330612c5608b17&page=${page}&pageSize=${props.pageSize}`;
-        let url = `http://localhost:8000/${props.country}/${props.category}/${page}/${props.pageSize}`;
+        let url = `/${props.country}/${props.category}/${page}/${props.pageSize}`;
         setPage(page + 1);
         setLoading(true);
         props.setProgress(20);
@@ -59,7 +59,7 @@ export default function News (props){
 //     }
     const fetchMoreData = async () => {
         // let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=34ab3c84f5d14dcd82330612c5608b17&page=${page + 1}&pageSize=${props.pageSize}`;
-        let url = `http://localhost:8000/${props.country}/${props.category}/${page}/${props.pageSize}`;
+        let url = `/${props.country}/${props.category}/${page}/${props.pageSize}`;
         setPage(page + 1);
         setLoading(true);
         let data = await axios.get(url);
