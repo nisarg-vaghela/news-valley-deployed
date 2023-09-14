@@ -25,10 +25,10 @@ app.get('/:country/:category/:page/:pageSize', async (request, response) => {
     let category = request.params.category;
     let page = request.params.page;
     let pageSize = request.params.pageSize;
-    console.log(country);
-    console.log(category);
-    console.log(page);
-    console.log(pageSize);
+    // console.log(country);
+    // console.log(category);
+    // console.log(page);
+    // console.log(pageSize);
 
     let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=78f1717d11e3473b88301ecb8198e460&page=${page}&pageSize=${pageSize}`;
     // var dataa={};
